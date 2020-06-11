@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="879c2108-8b4e-4887-820c-184578f30b4f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1SneqofV8OhAHwGMqpxYnFSFdW0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hasan\Documents\workspace-spring-tool-suite-4-4.3.2.RELEASE\ticketbackground\src\main\scripts" />
+      <recent name="C:\Users\hasan\Documents\workspace-spring-tool-suite-4-4.3.2.RELEASE\ticketbackground" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+      <command value="mvn clean package docker:run" />
+      <command value="mvn clean" />
+      <command value="mvn clean package docker:start" />
+      <command value="mvn clean package docker:build" />
+      <command value="mvn package compile" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="TicketbackgroundApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ticketbackground" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ticket.TicketbackgroundApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="showServicesTree" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="879c2108-8b4e-4887-820c-184578f30b4f" name="Default Changelist" comment="" />
+      <created>1572203980093</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572203980093</updated>
+      <workItem from="1572203985427" duration="9079000" />
+      <workItem from="1572269823623" duration="814000" />
+      <workItem from="1572274313399" duration="26217000" />
+      <workItem from="1572973804001" duration="18766000" />
+      <workItem from="1573901769937" duration="9375000" />
+      <workItem from="1575480611068" duration="2583000" />
+      <workItem from="1578744546267" duration="232000" />
+      <workItem from="1579440538915" duration="2872000" />
+      <workItem from="1579891592443" duration="456000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="183" key="#Project_Structure" timestamp="1589133880654">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="183" key="#Project_Structure/0.0.1920.1050@0.0.1920.1050" timestamp="1589133880654" />
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1591872106849">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1591872106849" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1589204368651">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1589204368651" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1589204368651">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1589204368651" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1589204368651">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1589204368651" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1589204368651">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1589204368651" />
+    <state x="342" y="137" key="new project wizard" timestamp="1589913506980">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="342" y="137" key="new project wizard/0.0.1920.1050@0.0.1920.1050" timestamp="1589913506980" />
+    <state x="616" y="243" width="672" height="677" key="run.anything.popup" timestamp="1589204336528">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="616" y="243" width="672" height="677" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1589204336528" />
+  </component>
+</project>

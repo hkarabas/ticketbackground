@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.7.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>ticketbackground</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>ticketbackground</name>
+	<description>Ticket project for Spring Boot</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<docker.image.prefix>ticketbackground</docker.image.prefix>
+		<docker.image.name>springticket</docker.image.name>
+		 <docker.startParallel>true</docker.startParallel>
+	</properties>
+		
+
+	
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+<!-- 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
+		</dependency> -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jersey</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web-services</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-rest-hal-browser</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.session</groupId>
+			<artifactId>spring-session-core</artifactId>
+		</dependency>
+			     
+		
+		<dependency>
+    		<groupId>org.projectlombok</groupId>
+   			<artifactId>lombok</artifactId>
+		</dependency>
+			<dependency>
+    		<groupId>org.apache.commons</groupId>
+    		<artifactId>commons-lang3</artifactId>
+    		<version>3.0</version>
+		</dependency>
+		<dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+	
+	    <dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		
+		
+		
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			
+			<plugin>
+				<groupId>io.fabric8</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.25.2</version>
+
+				<configuration>
+
+                    <dockerHost>http://localhost:2375</dockerHost>
+<!--                     <dockerHost>unix:///var/run/docker.sock</dockerHost> -->
+                    <verbose>true</verbose>
+					<images>
+
+						<image>
+
+							<name>${docker.image.prefix}/${docker.image.name}</name>
+							<build>
+									<dockerFileDir>${project.basedir}/target/dockerfile/</dockerFileDir>
+
+                                <!--copies artficact to docker build dir in target-->
+								<assembly>
+									<descriptorRef>artifact</descriptorRef>
+								</assembly>
+								<tags>
+									<tag>latest</tag>
+									<tag>${project.version}</tag>
+								</tags>
+							</build>
+						<!--	<run>
+								<ports>
+									<port>8080:8080</port>
+								</ports>
+								<links>
+									<link>myrabbitmq:rabbitmq</link>
+								</links>
+								<env>
+									<SPRING_RABBITMQ_HOST>rabbitmq</SPRING_RABBITMQ_HOST>
+								</env>
+								<dependsOn>
+									<container>myrabbitmq</container>
+									<container>ticketbacground</container>
+								</dependsOn>
+							</run>-->
+
+						</image>
+
+
+							  <!--mysql container-->
+					<!--<image>
+							<name>mysql</name>
+                            <alias>mysqldb</alias>
+							<run>
+                          	<ports>
+                                    <port>3306:3306</port>
+                                </ports>
+                                <env>
+                                    <MYSQL_DATABASE>etiya</MYSQL_DATABASE>
+                                    <MYSQL_ROOT_PASSWORD>Buster</MYSQL_ROOT_PASSWORD>
+                                    <MYSQL_USER>ticket</MYSQL_USER>
+                                    <MYSQL_PASSWORD>ticket</MYSQL_PASSWORD>
+                                    <MYSQL_ALLOW_EMPTY_PASSWORD>no</MYSQL_ALLOW_EMPTY_PASSWORD>
+                                </env>
+                                <wait>
+                                    <time>10000</time>
+                                </wait>
+							</run>
+						</image>
+						 <image>
+                            <name>rabbitmq</name>
+                            <alias>myrabbitmq</alias>
+                            <run>
+                                <ports>
+                                    <port>5671</port>
+                                    <port>5672</port>
+                                    <port>4369</port>
+                                    <port>25672</port>
+                                </ports>
+                                <wait>
+                                    <time>10000</time>
+                                </wait>
+                            </run>
+						 </image>
+					-->
+					<image><name>ticketbackground/springticket</name>
+						<alias>springticket</alias>
+
+						<run>
+
+							<ports>
+								<port>8081:8081</port>
+							</ports>
+							<links>
+								<link>rabbitmq:rabbitmq</link>
+								<link>mysqldb:mysqldb</link>
+							</links>
+							<env>
+								<name>ticketbackground</name>
+								<SPRING_DATASOURCE_URL>jdbc:mysql://mysqldb:3306/etiya</SPRING_DATASOURCE_URL>
+								<SPRING_PROFILES_ACTIVE>mysql</SPRING_PROFILES_ACTIVE>
+								<SPRING_RABBITMQ_HOST>rabbitmq</SPRING_RABBITMQ_HOST>
+							</env>
+
+
+						</run>
+					</image>
+
+
+
+
+				</images>
+				</configuration>
+				<executions>
+				<execution>
+
+					<id>start</id>
+					<phase>pre-integration-test</phase>
+					<configuration>
+						<name>ticketbackground</name>
+					</configuration>
+					<goals>
+						<goal>stop</goal>
+						<goal>build</goal>
+						<goal>start</goal>
+					</goals>
+				</execution>
+				</executions>
+			</plugin>
+			<plugin>
+                <groupId>org.codehaus.gmavenplus</groupId>
+                <artifactId>gmavenplus-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <scripts>
+                        <script>file:///${project.basedir}/src/main/scripts/BuildDockerfile.groovy</script>
+                    </scripts>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.codehaus.groovy</groupId>
+                        <artifactId>groovy-all</artifactId>
+                        <!-- any version of Groovy \>= 1.5.0 should work here -->
+                        <version>2.4.8</version>
+                        <scope>runtime</scope>
+                    </dependency>
+                </dependencies>
+            </plugin>
+		
+		</plugins>
+		
+		
+			
+		
+	</build>
+
+</project>

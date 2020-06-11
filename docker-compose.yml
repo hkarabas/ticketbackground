@@ -1,0 +1,42 @@
+version: '3.6'
+
+services:
+  mysqlervice:
+      image: mysql:latest
+      restart: always
+      environment:
+        - MYSQL_ROOT_PASSWORD=Buster
+        - MYSQL_DATABASE=etiya
+        - MYSQL_PASSWORD=etiya
+      volumes:
+        - mysqldata:/var/lib/mysql
+      ports:
+        - '3306:3306'
+  rabbitmq:
+    image: rabbitmq
+    restart: always
+    ports:
+      - "5671:5671"
+      - "5672:5672"
+      - "4369:4369"
+  ticketbackgroundservice:
+    image: ticketbackground/springticket
+    build:
+      context: ./
+      dockerfile: C:\Users\hasan\Documents\workspace-spring-tool-suite-4-4.3.2.RELEASE\ticketbackground\src\main\scripts\Dockerfile
+    ports:
+      - "8081:8081"
+    restart: always
+    depends_on:
+      - mysqlervice
+      - rabbitmq
+    environment:
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_DATASOURCE_URL: 'jdbc:mysql://mysqlervice:3306/etiya'
+      DATABASE_HOST: mysqlervice
+      DATABASE_USER: etiya
+      DATABASE_PASSWORD: etiya
+      DATABASE_NAME: etiya
+      DATABASE_PORT: 3306
+volumes:
+  mysqldata:

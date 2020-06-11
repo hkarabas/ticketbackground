@@ -1,0 +1,19 @@
+version: '3.6'
+
+services:
+  ticketbackgroundservice:
+    image: ticketbackground/springticket
+    build:
+      context: ../
+      dockerfile: C:\Users\hasan\Documents\workspace-spring-tool-suite-4-4.3.2.RELEASE\ticketbackground\src\main\scripts\Dockerfile
+    ports:
+      - "8081:8081"
+    restart: always
+    external_links:
+      - mysqldb
+      - rabbitmq
+    environment:
+      SPRING_DATASOURCE_URL: 'jdbc:mysql://mysqldb:3306/etiya'
+      SPRING_PROFILES_ACTIVE: 'mysql'
+      SPRING_RABBITMQ_HOST: rabbitmq
+
