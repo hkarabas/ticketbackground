@@ -8,7 +8,6 @@ public class HavaAlaniNotFoundException  extends RuntimeException {
 
 	public HavaAlaniNotFoundException(String error) {
 		super(error);
-		// TODO Auto-generated constructor stub
 	}
 	
 

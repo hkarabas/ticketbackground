@@ -8,17 +8,45 @@ import javax.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
+
 @Entity
 public class Kullanici {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-	
+
+
+
 	private String kullanici;
 	
 	private String sifre;
 	
 	private Integer rolid;
+
+
+	public Long getId() {return id;	}
+
+	public String getKullanici() {
+		return kullanici;
+	}
+
+	public void setKullanici(String kullanici) {
+		this.kullanici = kullanici;
+	}
+
+	public String getSifre() {
+		return sifre;
+	}
+
+	public void setSifre(String sifre) {
+		this.sifre = sifre;
+	}
+
+	public Integer getRolid() {
+		return rolid;
+	}
+
+	public void setRolid(Integer rolid) {
+		this.rolid = rolid;
+	}
 }

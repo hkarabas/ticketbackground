@@ -18,9 +18,6 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
-@Data
-@Getter
-@Setter
 @Entity
 @EqualsAndHashCode(exclude={"havaalanliste"})
 public class Havayolu {
@@ -28,6 +25,8 @@ public class Havayolu {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+
 
 	private String havayoluad;
 	/*
@@ -41,10 +40,22 @@ public class Havayolu {
 	 private List<Havaalani> havaalanliste;
 
 	public Havayolu() {
-
-
 	}
 
+	public Long getId() {return id;}
+	public String getHavayoluad() {
+		return havayoluad;
+	}
 
+	public void setHavayoluad(String havayoluad) {
+		this.havayoluad = havayoluad;
+	}
 
+	public List<Havaalani> getHavaalanliste() {
+		return havaalanliste;
+	}
+
+	public void setHavaalanliste(List<Havaalani> havaalanliste) {
+		this.havaalanliste = havaalanliste;
+	}
 }

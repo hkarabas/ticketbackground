@@ -7,6 +7,22 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ticketbackground" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="ticketbackground/invalid/Spring" />
+      <facet id="ticketbackground/invalid/Web" />
+    </ignored-facets>
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -24,7 +40,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/bilet/model" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -32,7 +48,14 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bilet.model" />
+      <recent name="com.bilet.controller" />
+      <recent name="com.bilet.repositories" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hasan\Documents\workspace-spring-tool-suite-4-4.3.2.RELEASE\ticketbackground\src\main\java\com\bilet\model" />
+      <recent name="C:\Users\hasan\Documents\workspace-spring-tool-suite-4-4.3.2.RELEASE\ticketbackground\src\main\java\com\bilet\security\jwt" />
       <recent name="C:\Users\hasan\Documents\workspace-spring-tool-suite-4-4.3.2.RELEASE\ticketbackground\src\main\scripts" />
       <recent name="C:\Users\hasan\Documents\workspace-spring-tool-suite-4-4.3.2.RELEASE\ticketbackground" />
     </key>
@@ -89,10 +112,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="552" y="183" key="#Project_Structure/0.0.1920.1050@0.0.1920.1050" timestamp="1589133880654" />
-    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1591872106849">
+    <state x="690" y="280" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1592745561092">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1591872106849" />
+    <state x="690" y="280" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1592745561092" />
+    <state x="765" y="209" key="#com.intellij.ide.util.MemberChooser" timestamp="1592743151934">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="765" y="209" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1592743151934" />
+    <state x="640" y="261" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1592732724574">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="640" y="261" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1592732724574" />
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1592734350469">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1592734350469" />
     <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1589204368651">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -109,13 +144,29 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1589204368651" />
+    <state x="440" y="99" key="SettingsEditor" timestamp="1592744728436">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="440" y="99" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1592744728436" />
+    <state x="609" y="140" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1592470697188">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="609" y="140" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1592470697188" />
+    <state x="657" y="257" width="806" height="536" key="find.popup" timestamp="1592762739725">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="657" y="257" width="806" height="536" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1592762739725" />
     <state x="342" y="137" key="new project wizard" timestamp="1589913506980">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="342" y="137" key="new project wizard/0.0.1920.1050@0.0.1920.1050" timestamp="1589913506980" />
-    <state x="616" y="243" width="672" height="677" key="run.anything.popup" timestamp="1589204336528">
+    <state x="616" y="243" width="672" height="677" key="run.anything.popup" timestamp="1592477004792">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="616" y="243" width="672" height="677" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1589204336528" />
+    <state x="616" y="243" width="672" height="677" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1592477004792" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1592743790165">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1592743790165" />
   </component>
 </project>

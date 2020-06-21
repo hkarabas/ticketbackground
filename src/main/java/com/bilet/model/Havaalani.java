@@ -17,9 +17,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 
-@Data
-@Getter
-@Setter
+
 @Entity
 @EqualsAndHashCode(exclude={"havayolulist"})
 public class Havaalani {
@@ -42,8 +40,35 @@ public class Havaalani {
 		public Havaalani() {
 		}
 
+	public Long getId() {
+		return id;
+	}
 
+	public void setId(Long id) {
+		this.id = id;
+	}
 
+	public String getHavalaniad() {
+		return havalaniad;
+	}
 
-	    
+	public void setHavalaniad(String havalaniad) {
+		this.havalaniad = havalaniad;
+	}
+
+	public String getSehir() {
+		return sehir;
+	}
+
+	public void setSehir(String sehir) {
+		this.sehir = sehir;
+	}
+
+	public List<Havayolu> getHavayolulist() {
+		return havayolulist;
+	}
+
+	public void setHavayolulist(List<Havayolu> havayolulist) {
+		this.havayolulist = havayolulist;
+	}
 }
