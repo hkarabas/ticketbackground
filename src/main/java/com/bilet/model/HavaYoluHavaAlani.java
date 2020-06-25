@@ -9,7 +9,8 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "hava_yolu_hava_alani")
-@Data
+@Getter
+@Setter
 public class HavaYoluHavaAlani {
 
 	@Id

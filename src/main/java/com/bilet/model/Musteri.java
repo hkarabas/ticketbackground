@@ -14,7 +14,8 @@ import lombok.Setter;
 
 
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 public class Musteri {
 	

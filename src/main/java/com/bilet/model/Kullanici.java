@@ -12,7 +12,8 @@ import lombok.Setter;
 
 
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 public class Kullanici {
 	@Id
