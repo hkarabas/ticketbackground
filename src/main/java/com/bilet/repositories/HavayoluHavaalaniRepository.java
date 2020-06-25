@@ -1,8 +1,9 @@
 package com.bilet.repositories;
 
+import com.bilet.model.HavaYoluHavaAlani;
 import org.springframework.data.repository.CrudRepository;
 
-import com.bilet.model.HavaYoluHavaAlani;
+
 
 public interface HavayoluHavaalaniRepository extends CrudRepository<HavaYoluHavaAlani, Long> {
 	

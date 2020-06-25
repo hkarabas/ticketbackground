@@ -1,8 +1,13 @@
 package com.bilet.controller;
 
 
+import com.bilet.exception.HavaYoluNotFoundException;
 import com.bilet.exception.TakvimNotFoundException;
+import com.bilet.model.HavaYoluHavaAlani;
+import com.bilet.model.Havayolu;
 import com.bilet.model.Takvim;
+import com.bilet.repositories.HavaalaniRepository;
+import com.bilet.repositories.HavayoluRepository;
 import com.bilet.repositories.TakvimRapository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,6 +23,13 @@ public class RestTakvimControl {
 
     @Autowired
     TakvimRapository takvimrepisorty;
+
+    @Autowired
+    HavayoluRepository havayolurepository;
+
+
+    @Autowired
+    HavaalaniRepository havaalaniRepository;
 
 
 
@@ -74,6 +86,21 @@ public class RestTakvimControl {
     @DeleteMapping("/deleteById/{id}")
     public void deleteById(@PathVariable Long id) {
         takvimrepisorty.deleteById(id);
+    }
+
+
+
+    @GetMapping(path = "/getHavaYolu/{id}")
+    public ResponseEntity<Havayolu> getHavaYoluById(@PathVariable Long id) {
+        return  havayolurepository.findById(id).map(havayolu -> {
+            return new ResponseEntity<Havayolu>(havayolu,HttpStatus.OK);
+        }).orElseThrow(()->  new HavaYoluNotFoundException("Aradığınız  Hava Yolu Şirketi Bulunumadı"));
+    }
+
+
+    @GetMapping(path = "/getHavayoluList")
+    public List<Havayolu> getHavaYoluList() {
+        return (List<Havayolu>) havayolurepository.findAll();
     }
 
 

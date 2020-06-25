@@ -2,24 +2,21 @@ package com.bilet.model;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+
+
+import javax.persistence.*;
 
 @Entity
-@EqualsAndHashCode(exclude={"havaalanliste"})
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Havayolu {
 	
 	@Id
@@ -29,28 +26,21 @@ public class Havayolu {
 
 
 	private String havayoluad;
-	/*
+     /*
 	 @JsonIgnore
 	 @ManyToMany(cascade = {CascadeType.MERGE,CascadeType.PERSIST,CascadeType.DETACH,CascadeType.REFRESH} )
 	 @JoinTable(name = "HavaYoluHavaAlani",
      joinColumns = @JoinColumn(name = "havayolu_id",referencedColumnName = "id" ,updatable = false,insertable = false),
      inverseJoinColumns = @JoinColumn(name = "havaalani_id",referencedColumnName = "id",updatable = false,insertable = false))
-	 */
+
+
+
+	*/
 	 @ManyToMany(mappedBy = "havayolulist")
-	 private List<Havaalani> havaalanliste;
+      private List<Havaalani> havaalanliste;
 
-	public Havayolu() {
-	}
 
-	public Long getId() {return id;}
-	public String getHavayoluad() {
-		return havayoluad;
-	}
-
-	public void setHavayoluad(String havayoluad) {
-		this.havayoluad = havayoluad;
-	}
-
+	/*
 	public List<Havaalani> getHavaalanliste() {
 		return havaalanliste;
 	}
@@ -58,4 +48,6 @@ public class Havayolu {
 	public void setHavaalanliste(List<Havaalani> havaalanliste) {
 		this.havaalanliste = havaalanliste;
 	}
+
+	 */
 }

@@ -16,13 +16,23 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
 
 
     @Autowired
-    JwtTokenProvider jwtTokenProvider;
+    private JwtTokenProvider jwtTokenProvider;
+
+
+    /*
+    @Bean
+    public  JwtTokenProvider getJwtTokenProvider(){
+        return  this.jwtTokenProvider;
+    }
+    p */
+
 
     @Bean
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
+
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {

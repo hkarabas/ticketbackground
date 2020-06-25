@@ -5,6 +5,7 @@ import com.bilet.repositories.UserRepository;
 import com.bilet.security.jwt.JwtTokenProvider;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -24,9 +25,10 @@ import static org.springframework.http.ResponseEntity.ok;
 @RestController
 @RequestMapping("/auth")
 public class AuthenticationController {
-
     @Autowired
     AuthenticationManager authenticationManager;
+
+
 
     @Autowired
     JwtTokenProvider jwtTokenProvider;
